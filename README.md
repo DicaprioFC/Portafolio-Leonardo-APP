@@ -81,7 +81,57 @@ El proyecto siguió una arquitectura **MVVM** con soporte de **Firebase (Auth, R
 - **Fragmentos de código relevantes**
   - `OffersViewModelEmpleador.kt` → publicación de ofertas.  
   - `OffersViewModel.kt` → búsqueda y filtrado dinámico.  
-  - Configuración de Firebase en Android.  
+  - Configuración de Firebase en Android.
+ 
+    ## 📑 Fragmento de código relevante
+
+```kotlin
+// OffersViewModel.kt
+package com.example.myappcancheito.postulante.ui
+
+import androidx.lifecycle.*
+import com.example.myappcancheito.empleador.ofertas.Offer
+import com.google.firebase.database.*
+import kotlinx.coroutines.*
+
+data class OffersFilter(
+    val cargo: String? = null,
+    val ciudad: String? = null,
+    val query: String? = null
+)
+
+class OffersViewModel : ViewModel() {
+    private val allOffers = mutableListOf<Offer>()
+    private var currentFilter = OffersFilter()
+
+    private val _items = MutableLiveData<List<Offer>>(emptyList())
+    val items: LiveData<List<Offer>> = _items
+
+    private val _empty = MutableLiveData(false)
+    val empty: LiveData<Boolean> = _empty
+
+    fun applyFilters(filter: OffersFilter) {
+        currentFilter = filter
+        viewModelScope.launch {
+            val filtered = allOffers.filter { matchesFilter(it, filter) }
+            _items.value = filtered
+            _empty.value = filtered.isEmpty()
+        }
+    }
+
+    private fun matchesFilter(offer: Offer, f: OffersFilter): Boolean {
+        val okCargo = f.cargo?.equals(offer.cargo, ignoreCase = true) ?: true
+        val okCiudad = f.ciudad?.equals(offer.ubicacion, ignoreCase = true) ?: true
+        val okQuery = f.query?.let { q ->
+            val haystack = listOf(
+                offer.cargo, offer.descripcion,
+                offer.ubicacion, offer.modalidad, offer.pago_aprox
+            ).joinToString(" ").lowercase()
+            q.lowercase() in haystack
+        } ?: true
+        return okCargo && okCiudad && okQuery
+    }
+}
 
 ---
 
@@ -90,3 +140,4 @@ El proyecto siguió una arquitectura **MVVM** con soporte de **Firebase (Auth, R
 - **Autoreflexión:** Reforcé mi experiencia en **Kotlin, Firebase y arquitectura MVVM**, logrando entregar un módulo funcional y escalable.  
 - **Plan de crecimiento personal:** Expandir mi conocimiento hacia **Jetpack Compose y Clean Architecture** para mejorar escalabilidad y productividad.  
 - **Impacto en visión profesional:** Este proyecto consolidó mi interés en el **desarrollo móvil nativo Android** y me impulsa a seguir especializándome en apps con **Firebase y arquitecturas modernas**.  
+
