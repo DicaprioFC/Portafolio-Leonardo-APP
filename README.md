@@ -125,11 +125,12 @@ class OffersViewModel : ViewModel() {
         return okCargo && okCiudad && okQuery
     }
 }
-
+```
 ## 🔮 Reflexión y crecimiento futuro
 
 - **Autoreflexión:** Reforcé mi experiencia en **Kotlin, Firebase y arquitectura MVVM**, logrando entregar un módulo funcional y escalable.  
 - **Plan de crecimiento personal:** Expandir mi conocimiento hacia **Jetpack Compose y Clean Architecture** para mejorar escalabilidad y productividad.  
 - **Impacto en visión profesional:** Este proyecto consolidó mi interés en el **desarrollo móvil nativo Android** y me impulsa a seguir especializándome en apps con **Firebase y arquitecturas modernas**.  
+
 
 
