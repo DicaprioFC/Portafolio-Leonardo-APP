@@ -132,5 +132,59 @@ class OffersViewModel : ViewModel() {
 - **Plan de crecimiento personal:** Expandir mi conocimiento hacia **Jetpack Compose y Clean Architecture** para mejorar escalabilidad y productividad.  
 - **Impacto en visión profesional:** Este proyecto consolidó mi interés en el **desarrollo móvil nativo Android** y me impulsa a seguir especializándome en apps con **Firebase y arquitecturas modernas**.  
 
+# 📘 Declaración de Compromiso de Aprendizaje – Leonardo Fidel Arana Isita
+
+## 🔧 Habilidades técnicas (próximos 6 meses)
+
+1. **Mejorar dominio de Capacitor plugins**  
+   - Compromiso: estudiar e implementar al menos 2 plugins nativos (ej. cámara, notificaciones push).  
+   - Resultado esperado: integración exitosa en un prototipo híbrido.  
+
+2. **Persistencia local con SQLite o IndexedDB**  
+   - Compromiso: desarrollar un módulo CRUD offline con SQLite en Android.  
+   - Resultado esperado: manejo de datos incluso sin conexión a internet.  
+
+3. **Integración de servicios externos RESTful**  
+   - Compromiso: consumir APIs externas (ej. clima, calendario, geolocalización) en una app híbrida.  
+   - Resultado esperado: flujo funcional de datos externos dentro de la aplicación.  
+
+---
+
+## 🌀 Prácticas ágiles
+
+1. Aplicar **Daily Standups** incluso en proyectos individuales para organizar tareas y prioridades.  
+2. Utilizar **Tableros Kanban (Jira/Trello)** para dar seguimiento a User Stories y tareas.  
+3. Ejecutar **Retrospectivas mensuales** para identificar bloqueos y mejoras en el proceso de desarrollo.  
+
+---
+
+## 🤝 Colaboración
+
+1. Mejorar **habilidades de comunicación técnica**, compartiendo avances con el equipo mediante documentación clara.  
+2. Practicar **liderazgo en microproyectos**, asumiendo la coordinación de un módulo o funcionalidad.  
+3. Fomentar la **resolución colaborativa de problemas**, pidiendo y ofreciendo feedback técnico entre pares.  
+
+---
+
+## 📊 Métricas de éxito
+
+- Completar al menos **2 integraciones reales con APIs externas** en proyectos personales.  
+- Publicar **1 app de prueba con SQLite** en un repositorio GitHub documentado.  
+- Mantener un registro de **al menos 12 dailys y 3 retrospectivas** en los próximos 3 meses.  
+- Obtener feedback positivo de al menos **un compañero de equipo** en cada sprint colaborativo.  
+
+---
+
+## 👥 Socio de responsabilidad
+
+- **Nombre:** Shamir Erick CondorI Troche 
+
+---
+
+## 📅 Fecha de revisión
+
+- **Revisión programada:** dentro de **3 meses** → *30/12/2025*  
+- Actividad: reunión de retroalimentación con el socio de responsabilidad para evaluar avances técnicos y de colaboración.  
+
 
 
